@@ -1,0 +1,115 @@
+<!--   -->
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:300,400,500,600,700&family=Poppins:300,400,500,600,700&display=swap" rel="stylesheet">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>About — Steep & Sage</title>
+  <meta name="description" content="About Steep & Sage — our story, values, and the people behind the kettle.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    :root{ --bg: #fbfaf8; --muted: #6b7280; }
+    [data-theme='dark']{ --bg:#071024; --muted:#9ca3af; }
+    body{ font-family: 'Poppins', sans-serif; background: var(--bg); }
+    .fluid{ width:100%; max-width:none; }
+    .card{ background: rgba(255,255,255,0.8); backdrop-filter: blur(6px); border:1px solid rgba(0,0,0,0.04); }
+    [data-theme='dark'] .card{ background: rgba(255,255,255,0.03); border:1px solid rgba(255,255,255,0.04); }
+  </style>
+</head>
+<body style="font-family: 'Merriweather', sans-serif;" class="w-full fluid pt-28 px-6 pb-12" style="font-family: 'Merriweather', serif;">
+  <header class="w-full fixed top-4 left-0 z-40 px-6">
+    <nav class="w-full fluid flex items-center justify-between gap-4 rounded-xl p-3 shadow-lg bg-white/70 backdrop-blur-md">
+      <a href="#" onclick="window.parent.handlePreviewNavigation(\'index.html\'); return false;" class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded-full flex items-center justify-center bg-gradient-to-br from-[#16a34a] to-[#f59e0b] text-white font-bold">SS</div>
+        <div class="hidden sm:block">
+          <h1 class="text-lg font-semibold">Steep & Sage</h1>
+          <p class="text-xs text-[var(--muted)] -mt-1">Tea • Tisanes • Community</p>
+        </div>
+      </a>
+      <div class="flex gap-3 text-sm">
+        <a href="#" onclick="window.parent.handlePreviewNavigation(\'index.html\'); return false;" class="px-3 py-2 rounded-md hover:bg-gray-100">Home</a>
+        <a href="#" onclick="window.parent.handlePreviewNavigation(\'contact.html\'); return false;" class="px-3 py-2 rounded-md hover:bg-gray-100">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="w-full fluid">
+    <section class="card p-8 rounded-2xl shadow-lg">
+      <h2 class="text-3xl font-bold">Our Story</h2>
+      <p class="text-[var(--muted)] mt-3">Founded in 2019 by two friends who loved tea and conversation, Steep & Sage started as a tiny stall at a weekend market. Today we are a neighborhood tea room focused on sourcing small-batch leaves, celebrating seasonal tisanes, and creating slow spaces for connection.</p>
+
+      <div class="mt-6 grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div class="p-4 rounded-lg bg-white/70">
+          <h4 class="font-semibold">Mission</h4>
+          <p class="text-[var(--muted)] mt-2">Foster calm, connection, and care through thoughtfully brewed tea.</p>
+        </div>
+        <div class="p-4 rounded-lg bg-white/70">
+          <h4 class="font-semibold">Approach</h4>
+          <p class="text-[var(--muted)] mt-2">Direct-sourced teas, seasonal menus, workshops, and composting used leaves.</p>
+        </div>
+        <div class="p-4 rounded-lg bg-white/70">
+          <h4 class="font-semibold">Values</h4>
+          <p class="text-[var(--muted)] mt-2">Quality, Community, Sustainability, and Mindfulness.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="mt-6 card p-8 rounded-2xl shadow-lg">
+      <h3 class="text-2xl font-bold">Meet the Team</h3>
+      <p class="text-[var(--muted)] mt-2">Our small team blends experience from tea gardens and kitchens to deliver a thoughtful tea experience.</p>
+
+      <div class="mt-4 grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div class="p-4 rounded-lg bg-white/70">
+          <h4 class="font-semibold">Anya</h4>
+          <p class="text-[var(--muted)] mt-1">Co-founder & Tea Curator</p>
+        </div>
+        <div class="p-4 rounded-lg bg-white/70">
+          <h4 class="font-semibold">Ravi</h4>
+          <p class="text-[var(--muted)] mt-1">Tea Master & Workshop Host</p>
+        </div>
+        <div class="p-4 rounded-lg bg-white/70">
+          <h4 class="font-semibold">Sofia</h4>
+          <p class="text-[var(--muted)] mt-1">Baker & Pastry Lead</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="mt-6 card p-8 rounded-2xl shadow-lg">
+      <h3 class="text-2xl font-bold">Sourcing & Sustainability</h3>
+      <p class="text-[var(--muted)] mt-2">We partner with small tea farms practicing regenerative agriculture. Leaves are sourced transparently and packaging is recyclable. Spent leaves are composted for community gardens.</p>
+    </section>
+
+    <section class="mt-6 card p-8 rounded-2xl shadow-lg">
+      <h3 class="text-2xl font-bold">Events</h3>
+      <p class="text-[var(--muted)] mt-2">We host matcha workshops, tea tastings, and occasional music nights. Sign up via our newsletter or contact us to host a private tasting.</p>
+      <div class="mt-4"><a href="#" onclick="window.parent.handlePreviewNavigation(\'contact.html\'); return false;" class="px-4 py-2 rounded-md bg-white/80">Host an event</a></div>
+    </section>
+
+    <section class="mt-6 card p-8 rounded-2xl shadow-lg">
+      <h3 class="text-2xl font-bold">Careers</h3>
+      <p class="text-[var(--muted)] mt-2">Occasional openings for baristas, workshop assistants, and bakers. Email careers@steepandsage.example with a short note and resume.</p>
+    </section>
+
+    <footer class="w-full mt-8 text-[var(--muted)]">
+      <div class="flex items-center justify-between">
+        <div>© Steep & Sage</div>
+        <div class="flex gap-3"><a href="#" onclick="window.parent.handlePreviewNavigation(\'index.html\'); return false;">Home</a><a href="#" onclick="window.parent.handlePreviewNavigation(\'contact.html\'); return false;">Contact</a></div>
+      </div>
+    </footer>
+  </main>
+
+  <script>
+    // persist theme from localStorage
+    const theme = localStorage.getItem('ss-theme');
+    if(theme) document.documentElement.setAttribute('data-theme', theme);
+  </script>
+</body>
+</html>
