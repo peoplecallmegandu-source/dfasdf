@@ -1,0 +1,140 @@
+<!--   -->
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:300,400,500,600,700&family=Poppins:300,400,500,600,700&display=swap" rel="stylesheet">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Contact — Steep & Sage</title>
+  <meta name="description" content="Get in touch with Steep & Sage for reservations, workshops, or questions.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    :root{ --bg:#fbfaf8; --muted:#6b7280; --accent:#16a34a; }
+    [data-theme='dark']{ --bg:#071024; --muted:#9ca3af; }
+    body{ font-family: 'Poppins', sans-serif; background: var(--bg); }
+    .fluid{ width:100%; max-width:none; }
+    .card{ background: rgba(255,255,255,0.85); backdrop-filter: blur(6px); border:1px solid rgba(0,0,0,0.04); }
+    [data-theme='dark'] .card{ background: rgba(255,255,255,0.03); border:1px solid rgba(255,255,255,0.04); }
+  </style>
+</head>
+<body style="font-family: 'Merriweather', sans-serif;" class="w-full fluid pt-28 px-6 pb-12" style="font-family: 'Merriweather', serif;">
+  <header class="w-full fixed top-4 left-0 z-40 px-6">
+    <nav class="w-full fluid flex items-center justify-between gap-4 rounded-xl p-3 shadow-lg bg-white/70 backdrop-blur-md">
+      <a href="#" onclick="window.parent.handlePreviewNavigation(\'index.html\'); return false;" class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded-full flex items-center justify-center bg-gradient-to-br from-[#16a34a] to-[#f59e0b] text-white font-bold">SS</div>
+        <div class="hidden sm:block">
+          <h1 class="text-lg font-semibold">Steep & Sage</h1>
+          <p class="text-xs text-[var(--muted)] -mt-1">Tea • Tisanes • Community</p>
+        </div>
+      </a>
+      <div class="flex gap-3 text-sm">
+        <a href="#" onclick="window.parent.handlePreviewNavigation(\'index.html\'); return false;" class="px-3 py-2 rounded-md hover:bg-gray-100">Home</a>
+        <a href="#" onclick="window.parent.handlePreviewNavigation(\'about.html\'); return false;" class="px-3 py-2 rounded-md hover:bg-gray-100">About</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="w-full fluid">
+    <section class="card p-8 rounded-2xl shadow-lg">
+      <h2 class="text-3xl font-bold">Contact & Reservations</h2>
+      <p class="text-[var(--muted)] mt-2">Questions about workshops, private tastings, or group reservations? Fill out the form and we’ll reply within 48 hours.</p>
+
+      <form id="contactForm" class="mt-6 grid grid-cols-1 md:grid-cols-2 gap-4" action="/api/contact" method="post">
+        <label class="flex flex-col gap-2">
+          <span class="text-sm">Full name</span>
+          <input required name="name" type="text" placeholder="Alex Morgan" class="px-4 py-3 rounded-md border" />
+        </label>
+
+        <label class="flex flex-col gap-2">
+          <span class="text-sm">Email</span>
+          <input required name="email" type="email" placeholder="you@company.com" class="px-4 py-3 rounded-md border" />
+        </label>
+
+        <label class="md:col-span-2 flex flex-col gap-2">
+          <span class="text-sm">Message</span>
+          <textarea required name="message" rows="6" placeholder="Tell us how we can help — reservation party size, workshop interest, or catering." class="px-4 py-3 rounded-md border"></textarea>
+        </label>
+
+        <label class="flex items-center gap-3 md:col-span-2">
+          <input type="checkbox" name="subscribe" class="w-4 h-4" />
+          <span class="text-sm text-[var(--muted)]">Send me news & workshop invites</span>
+        </label>
+
+        <div class="md:col-span-2 flex items-center gap-3">
+          <button type="submit" class="px-6 py-3 rounded-md bg-[var(--accent)] text-white">Send message</button>
+          <button type="reset" class="px-4 py-3 rounded-md border">Reset</button>
+        </div>
+      </form>
+
+      <p id="formStatus" class="mt-4 text-sm text-[var(--muted)]" aria-live="polite"></p>
+    </section>
+
+    <section class="mt-6 card p-8 rounded-2xl shadow-lg">
+      <h3 class="text-2xl font-bold">Contact details</h3>
+      <p class="text-[var(--muted)] mt-2">Phone: (555) 987-6543 — Email: hello@steepandsage.example</p>
+
+      <div class="mt-4 grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div class="p-4 rounded-lg bg-white/70">
+          <h4 class="font-semibold">Hours</h4>
+          <p class="text-[var(--muted)] mt-1">Mon–Fri: 8am–7pm<br/>Sat–Sun: 9am–6pm</p>
+        </div>
+        <div class="p-4 rounded-lg bg-white/70">
+          <h4 class="font-semibold">Location</h4>
+          <p class="text-[var(--muted)] mt-1">42 Willow Lane — by the community garden</p>
+        </div>
+        <div class="p-4 rounded-lg bg-white/70">
+          <h4 class="font-semibold">Workshops & Catering</h4>
+          <p class="text-[var(--muted)] mt-1">Private tastings and small catering. Email events@steepandsage.example</p>
+        </div>
+      </div>
+    </section>
+
+    <footer class="w-full mt-8 text-[var(--muted)]">
+      <div class="flex items-center justify-between">
+        <div>© Steep & Sage</div>
+        <div class="flex gap-3"><a href="#" onclick="window.parent.handlePreviewNavigation(\'index.html\'); return false;">Home</a><a href="#" onclick="window.parent.handlePreviewNavigation(\'about.html\'); return false;">About</a></div>
+      </div>
+    </footer>
+  </main>
+
+  <script>
+    // restore theme if set
+    const theme = localStorage.getItem('ss-theme');
+    if(theme) document.documentElement.setAttribute('data-theme', theme);
+
+    // Basic client-side submit (demo only)
+    const form = document.getElementById('contactForm');
+    const status = document.getElementById('formStatus');
+    form.addEventListener('submit', async (e)=>{
+      e.preventDefault();
+      status.textContent = 'Submitting...';
+      const data = Object.fromEntries(new FormData(form).entries());
+      if(!data.name || !data.email || !data.message){ status.textContent = 'Please complete all required fields.'; return; }
+
+      try{
+        const loader = document.createElement('div');
+        loader.className = 'fixed inset-0 flex items-center justify-center bg-black/50 z-50';
+        loader.innerHTML = '<div class="w-40 h-4 bg-white/60 rounded-full animate-pulse"></div>';
+        document.body.appendChild(loader);
+
+        await new Promise(r=>setTimeout(r, 900));
+        // demo POST (won't work without backend)
+        try{ await fetch('/api/contact', { method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify(data) }); }catch(e){}
+
+        document.body.removeChild(loader);
+        status.textContent = 'Thanks — we received your message. We will reply within 48 hours.';
+        form.reset();
+      } catch(err){
+        status.textContent = 'Something went wrong. Please try again.';
+      }
+    });
+  </script>
+</body>
+</html>
